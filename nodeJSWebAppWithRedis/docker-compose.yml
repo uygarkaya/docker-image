@@ -1,0 +1,15 @@
+version: '3'
+services:
+  redis-server:
+    image: 'redis'
+    ports:
+      - "6379:6379"
+    restart: always
+
+  nodejs-redis-app:
+    build: ./nodeJS
+    ports:
+      - "8081:8081"
+    depends_on:
+      - redis-server
+    restart: always
