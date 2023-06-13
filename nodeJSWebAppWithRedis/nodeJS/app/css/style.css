@@ -1,0 +1,20 @@
+.image-container img {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+.text-container {
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    color: slateblue;
+    font-weight: bolder;
+    font-size: 3rem;
+}
