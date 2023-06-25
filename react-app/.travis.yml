@@ -7,3 +7,13 @@ before_install:
 
 script:
   - docker run -e CI=true uygarkaya/react-app npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  reagion: "us-west-2"
+  app: "react-app"
+  env: "react-app-env"
+  bucket_name: "elasticbeanstalk-us-west-2-XXXXXXXXXXXX"
+  bucket_path: "react-app"
+  on: 
+    branch: main
